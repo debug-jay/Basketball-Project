@@ -105,11 +105,11 @@ namespace BasketballRoster
 
         public string[] Name { get; set; }
 
-        List<string> listNames1 = new List<string>();
-        List<string> listNames2 = new List<string>();
-        List<string> listNames3 = new List<string>();
-        List<string> listNames4 = new List<string>();
-        List<string> listNames5 = new List<string>();
+        private List<string> listNames1 = new List<string>();
+        private List<string> listNames2 = new List<string>();
+        private List<string> listNames3 = new List<string>();
+        private List<string> listNames4 = new List<string>();
+        private List<string> listNames5 = new List<string>();
 
 
         public void RosterOne()
