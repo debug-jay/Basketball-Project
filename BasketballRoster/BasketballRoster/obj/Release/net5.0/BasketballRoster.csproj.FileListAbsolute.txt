@@ -1,0 +1,15 @@
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.exe
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.deps.json
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.runtimeconfig.json
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.runtimeconfig.dev.json
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.dll
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\ref\BasketballRoster.dll
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\bin\Release\net5.0\BasketballRoster.pdb
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.GeneratedMSBuildEditorConfig.editorconfig
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.AssemblyInfoInputs.cache
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.AssemblyInfo.cs
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.csproj.CoreCompileInputs.cache
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.dll
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\ref\BasketballRoster.dll
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.pdb
+G:\VSTESTFOLDER\BasketballRoster\BasketballRoster\obj\Release\net5.0\BasketballRoster.genruntimeconfig.cache

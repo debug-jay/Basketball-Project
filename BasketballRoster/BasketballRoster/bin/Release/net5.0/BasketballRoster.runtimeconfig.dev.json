@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\jaydi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jaydi\\.nuget\\packages",
+      "C:\\VISUALSTUDIO\\SHAREDCOMPONENTS\\NuGetPackages"
+    ]
+  }
+}
