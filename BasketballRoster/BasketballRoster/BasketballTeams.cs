@@ -17,17 +17,17 @@ namespace BasketballRoster
          * 
          * 
          */
-        public Random rand = new Random();
+        protected Random rand = new Random();
 
         // private variables
-        public static string bPlayers = Path.Combine(Directory.GetCurrentDirectory(), "BasketballPlayers.txt");
-        public static string[] names = File.ReadAllLines(bPlayers);
-        public static string bTeams = Path.Combine(Directory.GetCurrentDirectory(), "BasketballTeams.txt");
-        public static string[] teams = File.ReadAllLines(bTeams);
-        public int gInput;
+        protected static string bPlayers = Path.Combine(Directory.GetCurrentDirectory(), "BasketballPlayers.txt");
+        protected static string[] names = File.ReadAllLines(bPlayers);
+        protected static string bTeams = Path.Combine(Directory.GetCurrentDirectory(), "BasketballTeams.txt");
+        protected static string[] teams = File.ReadAllLines(bTeams);
+        protected int gInput;
 
-        public static List<string> mlist = new List<string>(names);
-        public static List<string> tlist = new List<string>(teams);
+        protected static List<string> mlist = new List<string>(names);
+        protected static List<string> tlist = new List<string>(teams);
 
 
     }
@@ -127,7 +127,7 @@ namespace BasketballRoster
         }
 
 
-        public void RosterOne()
+        private void RosterOne()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -167,7 +167,7 @@ namespace BasketballRoster
                 }
             }
         }
-        public void RosterTwo()
+        private void RosterTwo()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -206,7 +206,7 @@ namespace BasketballRoster
                 }
             }
         }
-        public void RosterThree()
+        private void RosterThree()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -245,7 +245,7 @@ namespace BasketballRoster
                 }
             }
         }
-        public void RosterFour()
+        private void RosterFour()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -285,7 +285,7 @@ namespace BasketballRoster
                 }
             }
         }
-        public void RosterFive()
+        private void RosterFive()
         {
             //this.Name = this.names;
             Console.Clear();
