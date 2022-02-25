@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Threading;
 
 namespace BasketballRoster
 {
     public class MenuFunctionality
     {
-
-        // General variables
-        BasketballTeams teams = new BasketballTeams();
-        
         // private variables
         private bool isCheck = false;
-
-
-        // public variables
+        private int uInput;
+        private BasketballPlayers player = new BasketballPlayers();
         
+
         public void Menu()
         {// Write out Menu & Functionality
             
@@ -28,19 +26,36 @@ namespace BasketballRoster
                 Console.WriteLine("MAIN MENU");
                 Console.WriteLine('\n' + "Press Corresponding Number for Your Intentional Action" + '\n');
 
-                Console.WriteLine("1: List Teams & Roster" + '\n' +
-                                  "2: List Teams in Finals");
+                Console.Write("1: List Teams & Roster" + '\n' +
+                                  "2: List Teams in Finals" + '\n' + 
+                                  "3: Quit ");
 
-                int uInput = Convert.ToInt32(Console.ReadLine());
+                uInput = Convert.ToInt32(Console.ReadLine());
 
                 switch (uInput)
                 {
                     case 1:
-                        teams.PrintTeams();
+                        player.PrintTeams();
                         break;
 
                     case 2:
-                        Console.WriteLine("Owner Needs to Update");
+                        Console.WriteLine("Owner Needs to Update"); // Do this Tomorrow
+                        Thread.Sleep(500);
+                        
+                        break;
+
+                    case 3:
+
+                        Console.Write("Quitting ");
+                        Thread.Sleep(350);
+                        Console.Write(". ");
+                        Thread.Sleep(250);
+                        Console.Write(". ");
+                        Thread.Sleep(250);
+                        Console.WriteLine(". ");
+                        Thread.Sleep(100);
+
+                        Environment.Exit(0);
                         break;
 
                     default:
