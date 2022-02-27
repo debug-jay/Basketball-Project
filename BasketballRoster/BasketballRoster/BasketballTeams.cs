@@ -25,6 +25,7 @@ namespace BasketballRoster
         protected static string bTeams = Path.Combine(Directory.GetCurrentDirectory(), "BasketballTeams.txt");
         protected static string[] teams = File.ReadAllLines(bTeams);
         protected int gInput;
+        protected int tinput;
 
         protected static List<string> mlist = new List<string>(names);
         protected static List<string> tlist = new List<string>(teams);
@@ -83,31 +84,31 @@ namespace BasketballRoster
                     case 1:
                         
                         RosterOne();
-
+                        askInput();
                         break;
 
                     case 2:
                        
                         RosterTwo();
-
+                        askInput();
                         break;
 
                     case 3:
                         
                         RosterThree();
-
+                        askInput();
                         break;
 
                     case 4:
                         
                         RosterFour();
-
+                        askInput();
                         break;
 
                     case 5:
                      
                         RosterFive();
-
+                        askInput();
                         break;
 
                     default:
@@ -122,12 +123,32 @@ namespace BasketballRoster
                 }
                 
             }
-
-
         }
 
+        public void askInput()
+        {
+            while (true)
+            {
+                Console.WriteLine('\n' + "Press '0' to go back ");
+                Console.Write("Input: ");
+                int vinput = Convert.ToInt32(Console.ReadLine());
+                switch (vinput)
+                {
+                    case 0:
+                        break;
+                    default:
+                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams in Finals List");
+                        break;
 
-        private void RosterOne()
+                }
+                if (vinput == 0)
+                {
+                    break;
+                }
+            }
+        }
+
+        public void RosterOne()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -146,28 +167,9 @@ namespace BasketballRoster
                 Console.WriteLine(listNames1[i]);
 
             }
-            while (true)
-            {
-
-                Console.WriteLine('\n' + "Press '0' to go back ");
-                Console.Write("Input: ");
-                int input = Convert.ToInt32(Console.ReadLine());
-                switch (input)
-                {
-                    case 0:
-                        break;
-                    default:
-                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams List");
-                        break;
-
-                }
-                if (input == 0)
-                {
-                    break;
-                }
-            }
+            
         }
-        private void RosterTwo()
+        public void RosterTwo()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -185,28 +187,8 @@ namespace BasketballRoster
                 Console.WriteLine(listNames2[i]);
 
             }
-            while (true)
-            {
-
-                Console.WriteLine('\n' + "Press '0' to go back ");
-                Console.Write("Input: ");
-                int input = Convert.ToInt32(Console.ReadLine());
-                switch (input)
-                {
-                    case 0:
-                        break;
-                    default:
-                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams List");
-                        break;
-
-                }
-                if (input == 0)
-                {
-                    break;
-                }
-            }
         }
-        private void RosterThree()
+        public void RosterThree()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -223,29 +205,9 @@ namespace BasketballRoster
                 Console.Write(i + ": ");
                 Console.WriteLine(listNames3[i]);
 
-            }
-            while (true)
-            {
-
-                Console.WriteLine('\n' + "Press '0' to go back ");
-                Console.Write("Input: ");
-                int input = Convert.ToInt32(Console.ReadLine());
-                switch (input)
-                {
-                    case 0:
-                        break;
-                    default:
-                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams List");
-                        break;
-
-                }
-                if (input == 0)
-                {
-                    break;
-                }
-            }
+            }   
         }
-        private void RosterFour()
+        public void RosterFour()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -262,30 +224,9 @@ namespace BasketballRoster
                 Console.Write(i + ": ");
                 Console.WriteLine(listNames4[i]);
 
-            }
-
-            while (true)
-            {
-
-                Console.WriteLine('\n' + "Press '0' to go back ");
-                Console.Write("Input: ");
-                int input = Convert.ToInt32(Console.ReadLine());
-                switch (input)
-                {
-                    case 0:
-                        break;
-                    default:
-                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams List");
-                        break;
-
-                }
-                if(input == 0)
-                {
-                    break;
-                }
-            }
+            }  
         }
-        private void RosterFive()
+        public void RosterFive()
         {
             //this.Name = this.names;
             Console.Clear();
@@ -302,31 +243,170 @@ namespace BasketballRoster
                 Console.Write(i + ": ");
                 Console.WriteLine(listNames5[i]);
 
-            }
+            }     
+        }
 
+        private List<string> listTeam1 = new List<string>();
+        private List<string> listTeam2 = new List<string>();
+        private List<string> players1 = new List<string>();
+        private List<string> players2 = new List<string>();
+
+        public void ListFinalTeams()
+        {
             while (true)
             {
-
-                Console.WriteLine('\n' + "Press '0' to go back ");
-                Console.Write("Input: ");
-                int input = Convert.ToInt32(Console.ReadLine());
-                switch (input)
+                Console.Clear();
+                Console.WriteLine("TEAMS IN FINALS " + '\n');
+                if (listTeam1.Count < 1 && listTeam2.Count < 1)
                 {
-                    case 0:
-                        break;
-                    default:
-                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Teams List");
-                        break;
+                    for (int i = 0; i < 1; i++)
+                    {
+                        listTeam1.Add(tlist[rand.Next(1, 3)]);
+                        listTeam2.Add(tlist[rand.Next(4, 6)]);
+                    }
+                }
+                for (int x = 0; x < listTeam1.Count; x++)
+                {
+                    Console.WriteLine("1: " + listTeam1[x]);
+                    Console.WriteLine("2: " + listTeam2[x]);
 
                 }
-                if (input == 0)
+
+                Console.WriteLine('\n' + "Press Teams Corresponding Number To List Roster, Press '0' to go back");
+                Console.Write("Input: ");
+                tinput = Convert.ToInt32(Console.ReadLine());
+
+                switch (tinput)
+                {
+                    case 0:
+
+                        Console.Write("Returning ");
+
+                        Thread.Sleep(350);
+                        Console.Write(". ");
+                        Thread.Sleep(250);
+                        Console.Write(". ");
+                        Thread.Sleep(250);
+                        Console.WriteLine(". ");
+                        Thread.Sleep(100);
+                        break;
+
+                    case 1:
+
+                        if (listTeam1[0] == tlist[1])
+                        {
+                            RosterOne();
+                            askInput();
+                        }
+                        else if (listTeam1[0] == tlist[2])
+                        {
+                            RosterTwo();
+                            askInput();
+                        }
+                        else if (listTeam1[0] == tlist[3])
+                        {
+                            RosterThree();
+                            askInput();
+                        }
+                        else if (listTeam1[0] == tlist[4])
+                        {
+                            RosterFour();
+                            askInput();
+                        }
+                        else if (listTeam1[0] == tlist[5])
+                        {
+                            RosterFive();
+                            askInput();
+                        }
+                        else
+                        {
+                            MintPlayers1();
+                            askInput();
+                        }
+                        break;
+
+                    case 2:
+
+                        if (listTeam2[0] == tlist[1])
+                        {
+                            RosterOne();
+                            askInput();
+                        }
+                        else if (listTeam2[0] == tlist[2])
+                        {
+                            RosterTwo();
+                            askInput();
+                        }
+                        else if (listTeam2[0] == tlist[3])
+                        {
+                            RosterThree();
+                            askInput();
+                        }
+                        else if (listTeam2[0] == tlist[4])
+                        {
+                            RosterFour();
+                            askInput();
+                        }
+                        else if (listTeam2[0] == tlist[5])
+                        {
+                            RosterFive();
+                            askInput();
+                        }
+                        else
+                        {
+                            MintPlayers2();
+                            askInput();
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("Error: INPUT_INVALID$ 0xa787090a: Please Enter '0' To Return To Main Menu");
+                        break;
+                }
+
+                if (tinput == 0)
                 {
                     break;
                 }
+
             }
         }
 
 
-    }
 
+        private void MintPlayers1()
+        {
+            Console.Clear();
+            Console.WriteLine("ROSTER: " + listTeam1[0] + '\n');
+            if (players1.Count == 0)
+            {
+                for (int i = 1; i < 16; i++)
+                {
+                    players1.Add(mlist[rand.Next(500, 549)]);
+                }
+            }
+            for (int x = 0; x < players1.Count; x++)
+            {
+                Console.Write(x + ": ");
+                Console.WriteLine(players1[x]);
+            }
+        }
+        private void MintPlayers2()
+        {
+            Console.Clear();
+            Console.WriteLine("ROSTER: " + listTeam2[0] + '\n');
+            if (players2.Count == 0)
+            {
+                for (int i = 1; i < 16; i++)
+                {
+                    players2.Add(mlist[rand.Next(550, 599)]);
+                }
+            }
+            for (int x = 0; x < players2.Count; x++)
+            {
+                Console.Write(x + ": ");
+                Console.WriteLine(players2[x]);
+            }
+        }
+    }
 }

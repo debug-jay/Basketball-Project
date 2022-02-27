@@ -14,7 +14,7 @@ namespace BasketballRoster
         private bool isCheck = false;
         private int uInput;
         private BasketballPlayers player = new BasketballPlayers();
-        
+        //private TeamsInFinals TIF = new TeamsInFinals();
 
         public void Menu()
         {// Write out Menu & Functionality
@@ -39,8 +39,10 @@ namespace BasketballRoster
                         break;
 
                     case 2:
-                        Console.WriteLine("Owner Needs to Update"); // Do this Tomorrow
-                        Thread.Sleep(500);
+                        /*Console.WriteLine("Owner Needs to Update"); // Do this Tomorrow
+                        Thread.Sleep(500);*/
+
+                        player.ListFinalTeams();
                         
                         break;
 
