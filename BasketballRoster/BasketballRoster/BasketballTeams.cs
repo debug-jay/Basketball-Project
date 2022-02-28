@@ -10,13 +10,7 @@ namespace BasketballRoster
 {
     public class BasketballTeams
     {
-        /*  bPlayers    - Gets The Current Directory & File of the Basketball Players
-         *  bTeams      - Gets The Current Directory & File of the Basketball Teams
-         * 
-         * 
-         * 
-         * 
-         */
+        #region Teams and Players Main Variables
         protected Random rand = new Random();
 
         // private variables
@@ -29,31 +23,36 @@ namespace BasketballRoster
 
         protected static List<string> mlist = new List<string>(names);
         protected static List<string> tlist = new List<string>(teams);
-
+        #endregion
 
     }
 
     public class BasketballPlayers : BasketballTeams
     {
-
-
+        #region Main Basketball Teams / Players Variables
+        // For the PrintTeams Function
         private List<string> listNames1 = new List<string>();
         private List<string> listNames2 = new List<string>();
         private List<string> listNames3 = new List<string>();
         private List<string> listNames4 = new List<string>();
         private List<string> listNames5 = new List<string>();
 
-        
+        // For the Mint Players / List FinalTeams Function
+        private List<string> listTeam1 = new List<string>();
+        private List<string> listTeam2 = new List<string>();
+        private List<string> players1 = new List<string>();
+        private List<string> players2 = new List<string>();
+        #endregion
+
+        #region Main Basketball Teams / Players Function
         public void PrintTeams()
         {
-            //this.Team = this.teams;
-          
             while (true)
             {
 
                 Console.Clear();
                 Console.WriteLine("TEAMS & ROSTERS\n");
-                //Console.WriteLine("Teams:");
+                
                 int i = 1;
                 for (int x = i; x < 6; x++)
                 {
@@ -246,11 +245,6 @@ namespace BasketballRoster
             }     
         }
 
-        private List<string> listTeam1 = new List<string>();
-        private List<string> listTeam2 = new List<string>();
-        private List<string> players1 = new List<string>();
-        private List<string> players2 = new List<string>();
-
         public void ListFinalTeams()
         {
             while (true)
@@ -372,8 +366,6 @@ namespace BasketballRoster
             }
         }
 
-
-
         private void MintPlayers1()
         {
             Console.Clear();
@@ -408,5 +400,6 @@ namespace BasketballRoster
                 Console.WriteLine(players2[x]);
             }
         }
+        #endregion
     }
 }

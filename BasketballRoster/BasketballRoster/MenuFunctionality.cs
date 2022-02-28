@@ -10,14 +10,15 @@ namespace BasketballRoster
 {
     public class MenuFunctionality
     {
-        // private variables
+        #region Main Menu Variables
         private bool isCheck = false;
         private int uInput;
         private BasketballPlayers player = new BasketballPlayers();
-        //private TeamsInFinals TIF = new TeamsInFinals();
+        #endregion
 
+        #region Main Menu Functionality
         public void Menu()
-        {// Write out Menu & Functionality
+        {
             
             while (!isCheck)
             {
@@ -67,6 +68,6 @@ namespace BasketballRoster
 
             }
         }
-
+        #endregion
     }
 }
